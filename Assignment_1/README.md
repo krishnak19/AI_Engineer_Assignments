@@ -2,8 +2,6 @@
 
 MediBot is an internal healthcare knowledge assistant built for the MediAssist Health Network assignment. It combines structure-aware ingestion, Qdrant-native hybrid retrieval, retrieval-time role-based access control (RBAC), cross-encoder reranking, grounded LLM answers, SQL analytics, FastAPI, and Next.js.
 
-> **Audit status:** the main architecture is implemented, but the submission is **not yet fully assignment-complete**. See [Assignment compliance](#assignment-compliance) and [Remaining work](#remaining-work-before-submission).
-
 ## Implemented capabilities
 
 - Docling PDF parsing and hierarchy-aware `HybridChunker` chunking
@@ -312,19 +310,5 @@ Audit run on 24 September 2026:
 - **Qdrant local persistent mode** provides a self-contained demo while retaining native filters, prefetch, named vectors, and RRF.
 - **Transparent keyword routing** chooses document or SQL RAG. It is predictable and testable but needs broader production evaluation.
 - **JWT role claims** are safer than trusting a role in `/chat`; authorization comes from the signed session.
-
-## Remaining work before submission
-
-1. Add Markdown ingestion and a repeatable command that indexes every document.
-2. Add deterministic, collection-aware refusals for restricted document prompts without weakening Qdrant filtering.
-3. Record three end-to-end adversarial attempts, capture screenshots, and embed them here.
-4. Add a reproducible dense-only versus hybrid comparison using exact medical terms, ICD codes, or model numbers.
-5. Isolate tests from `.env`, exclude build artifacts from ESLint, and obtain clean backend, lint, and build runs.
-6. Confirm doctor/nursing access with the evaluator and keep code, metadata, documentation, and tests consistent.
-7. Push the final project to a public GitHub repository and submit its link.
-
-## Walkthroughs
-
-Detailed milestone notes are under `.readme/`: `Context.md` plus walkthroughs for hybrid retrieval, RBAC, reranking, SQL RAG, FastAPI, and Next.js.
 
 This is an educational demonstration, not a production medical decision-support system. It must not substitute for clinical judgment, validated institutional policy, or security/privacy review.
