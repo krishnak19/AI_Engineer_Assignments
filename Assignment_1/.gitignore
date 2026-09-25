@@ -1,0 +1,29 @@
+# Secrets and local environment configuration
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Internal working notes
+.readme/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+
+# Next.js and Node
+.next/
+node_modules/
+
+# Generated local vector database
+qdrant_data/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

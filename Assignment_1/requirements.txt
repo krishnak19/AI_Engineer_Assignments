@@ -1,0 +1,11 @@
+docling
+fastembed
+qdrant-client>=1.14.2
+pytest
+sentence-transformers
+groq
+python-dotenv
+fastapi
+uvicorn[standard]
+PyJWT
+httpx
